@@ -4,22 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nazarene Revival Church | Manyeleti Zone (2026 Programme)</title>
-  <meta name="description" content="Nazarene Revival Church - Manyeleti Zone. 2026 programme, committees, and contact details." />
+  <meta name="description" content="Nazarene Revival Church - Manyeleti Zone. 2026 programme, committees, members, and WhatsApp contact." />
 
   <style>
     :root{
       --bg:#f6f8fb; --card:#fff; --text:#0f172a; --muted:#64748b;
       --border:#e2e8f0; --brand:#2563eb; --brand2:#0ea5e9;
       --shadow:0 12px 30px rgba(2,6,23,.08); --radius:18px;
+      --ok:#16a34a;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans";
       color:var(--text);
-      background: radial-gradient(900px 500px at 15% 10%, rgba(37,99,235,.10), transparent 55%),
-                  radial-gradient(900px 500px at 85% 15%, rgba(14,165,233,.10), transparent 55%),
-                  var(--bg);
+      background:
+        radial-gradient(900px 500px at 15% 10%, rgba(37,99,235,.10), transparent 55%),
+        radial-gradient(900px 500px at 85% 15%, rgba(14,165,233,.10), transparent 55%),
+        var(--bg);
     }
     a{color:inherit;text-decoration:none}
     .container{max-width:1100px;margin:0 auto;padding:22px}
@@ -43,12 +45,12 @@
     .brand h1{font-size:14px;line-height:1.2;margin:0;letter-spacing:.2px}
     .brand p{margin:2px 0 0;font-size:12px;color:var(--muted)}
 
-    /* Tabs */
+    /* Main nav tabs */
     .tabs{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
     .tab-btn{
       border:1px solid var(--border);background:#fff;
       padding:10px 12px;border-radius:999px;
-      font-weight:700;font-size:13px;color:#0b1220;cursor:pointer;
+      font-weight:800;font-size:13px;color:#0b1220;cursor:pointer;
       transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
     }
     .tab-btn:hover{transform:translateY(-1px);box-shadow:0 10px 20px rgba(2,6,23,.06)}
@@ -81,7 +83,7 @@
       padding:8px 10px;border-radius:999px;
       border:1px solid rgba(226,232,240,.9);
       background:rgba(255,255,255,.75);
-      font-weight:700;font-size:12px;color:#0b1220;
+      font-weight:800;font-size:12px;color:#0b1220;
     }
     .hero-card{
       background:rgba(255,255,255,.75);
@@ -94,7 +96,7 @@
     .btn{
       border:1px solid var(--border);background:#fff;
       padding:10px 12px;border-radius:12px;
-      font-weight:800;cursor:pointer;font-size:13px;
+      font-weight:900;cursor:pointer;font-size:13px;
       display:inline-flex;align-items:center;gap:10px;
       transition:transform .12s ease, box-shadow .12s ease;
     }
@@ -126,7 +128,7 @@
     .section-head p{margin:0;color:var(--muted);font-size:12px}
     .section-body{padding:16px 18px 18px}
 
-    /* Controls */
+    /* Programme controls */
     .controls{
       display:flex;gap:10px;flex-wrap:wrap;
       align-items:center;justify-content:space-between;
@@ -136,7 +138,7 @@
     .input,.select{
       border:1px solid var(--border);background:#fff;
       border-radius:12px;padding:10px 12px;
-      font-weight:700;font-size:13px;color:#0b1220;
+      font-weight:800;font-size:13px;color:#0b1220;
       min-width:220px;outline:none;
     }
     .select{min-width:190px;cursor:pointer}
@@ -177,6 +179,65 @@
     }
     .mini.whats{border-color:rgba(22,163,74,.35);background:rgba(22,163,74,.08)}
     .mini.info{border-color:rgba(37,99,235,.35);background:rgba(37,99,235,.08)}
+
+    /* Committee filter tabs */
+    .subtabs{
+      display:flex;gap:10px;flex-wrap:wrap;
+      align-items:center;justify-content:space-between;
+      margin-bottom:12px;
+    }
+    .subtab-left{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .subtab-btn{
+      border:1px solid var(--border);
+      background:#fff;
+      padding:10px 12px;
+      border-radius:999px;
+      font-weight:900;
+      font-size:13px;
+      cursor:pointer;
+      transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .subtab-btn:hover{transform:translateY(-1px);box-shadow:0 10px 20px rgba(2,6,23,.06)}
+    .subtab-btn.active{
+      border-color:rgba(37,99,235,.35);
+      background:linear-gradient(135deg,rgba(37,99,235,.12),rgba(14,165,233,.10));
+      box-shadow:0 12px 26px rgba(37,99,235,.12);
+    }
+    .committee-card{
+      border:1px solid var(--border);
+      border-radius:16px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow:0 10px 22px rgba(2,6,23,.06);
+    }
+    .committee-head{
+      padding:14px 14px 12px;
+      border-bottom:1px solid var(--border);
+      display:flex;align-items:flex-start;justify-content:space-between;gap:10px;
+      background:linear-gradient(135deg,rgba(37,99,235,.08),rgba(14,165,233,.06));
+    }
+    .committee-head h4{margin:0;font-size:14px}
+    .committee-head p{margin:4px 0 0;color:var(--muted);font-size:12px;line-height:1.35}
+    .committee-body{padding:14px}
+    .table-wrap{overflow-x:auto}
+    table.clean{
+      width:100%;
+      border-collapse:collapse;
+      min-width:520px;
+    }
+    table.clean th, table.clean td{
+      border:1px solid var(--border);
+      padding:10px 10px;
+      text-align:left;
+      vertical-align:top;
+      font-size:13px;
+    }
+    table.clean th{
+      background:#f1f5f9;
+      font-weight:900;
+      font-size:12px;
+      letter-spacing:.2px;
+    }
 
     /* People cards */
     .people{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
@@ -241,13 +302,12 @@
         <div>
           <h2>Manyeleti Zone — 2026 Conferences & Programme</h2>
           <p>
-            This website displays the yearly programme, committees and their leadership structure,
-            zone members, and quick WhatsApp contact buttons.
+            View the yearly programme, filter committees, and contact the chairperson quickly on WhatsApp.
           </p>
           <div class="hero-badges">
-            <span class="badge">📅 Updated Programme</span>
-            <span class="badge">🧑‍🤝‍🧑 Committees & Members</span>
-            <span class="badge">💬 WhatsApp Quick Contact</span>
+            <span class="badge">📅 Year Programme</span>
+            <span class="badge">🧑‍🤝‍🧑 Committees</span>
+            <span class="badge">💬 WhatsApp</span>
           </div>
         </div>
 
@@ -293,126 +353,49 @@
       </div>
     </section>
 
-    <!-- TAB: COMMITTEES (LEADERSHIP STRUCTURE) -->
+    <!-- TAB: COMMITTEES (FILTER TABS + 2-COLUMN TABLE) -->
     <section class="section hide" id="tab-committees">
       <div class="section-head">
         <div>
-          <h3>Committees & Leadership Structure</h3>
-          <p>Manyeleti Zone – 2026</p>
+          <h3>Committees</h3>
+          <p>Select a committee to view leadership (Position + Full name)</p>
         </div>
-        <div class="hint">Table view</div>
+        <div class="hint" id="committeeCountHint">4 committees</div>
       </div>
 
-      <div class="section-body" style="overflow-x:auto;">
-        <table style="width:100%; border-collapse:collapse; min-width:1200px;">
-          <thead>
-            <tr style="background:#f1f5f9;">
-              <th style="padding:12px; border:1px solid #e2e8f0;">Executive Committee</th>
-              <th style="padding:12px; border:1px solid #e2e8f0;">Pastors Committee</th>
-              <th style="padding:12px; border:1px solid #e2e8f0;">Mothers Committee</th>
-              <th style="padding:12px; border:1px solid #e2e8f0;">Youth Committee</th>
-              <th style="padding:12px; border:1px solid #e2e8f0;">Children’s Committee</th>
-            </tr>
-          </thead>
+      <div class="section-body">
+        <div class="subtabs">
+          <div class="subtab-left" id="committeeTabs"></div>
+          <div class="hint">Tip: tap tabs to filter</div>
+        </div>
 
-          <tbody>
-            <tr>
-              <!-- Executive -->
-              <td style="padding:12px; border:1px solid #e2e8f0; vertical-align:top;">
-                <div class="strong">Leadership</div>
-                Chairperson: <span class="muted">TBA</span><br>
-                Vice Chairperson: <span class="muted">TBA</span><br>
-                Secretary: <span class="muted">TBA</span><br>
-                Vice Secretary: <span class="muted">TBA</span><br>
-                Treasurer: <span class="muted">TBA</span><br>
-                Additional Member(s): <span class="muted">TBA</span><br><br>
+        <div class="committee-card" id="committeeCard">
+          <div class="committee-head">
+            <div>
+              <h4 id="committeeTitle">Youth Committee</h4>
+              <p id="committeeDesc">Leadership structure</p>
+            </div>
+            <a class="mini whats" id="committeeWhats" href="#" target="_blank" rel="noopener">🟢 More Info</a>
+          </div>
 
-                <div class="strong">Programme</div>
-                • Oversees zone programmes<br>
-                • Coordinates all committees<br><br>
+          <div class="committee-body">
+            <div class="table-wrap">
+              <table class="clean" aria-label="Committee leadership table">
+                <thead>
+                  <tr>
+                    <th style="width:40%;">Position</th>
+                    <th>Full name</th>
+                  </tr>
+                </thead>
+                <tbody id="committeeTableBody"></tbody>
+              </table>
+            </div>
 
-                <a class="mini whats" id="waExec" href="#" target="_blank" rel="noopener">🟢 More Info</a>
-              </td>
-
-              <!-- Pastors -->
-              <td style="padding:12px; border:1px solid #e2e8f0; vertical-align:top;">
-                <div class="strong">Leadership</div>
-                Chairperson: <span class="muted">TBA</span><br>
-                Vice Chairperson: <span class="muted">TBA</span><br>
-                Secretary: <span class="muted">TBA</span><br>
-                Vice Secretary: <span class="muted">TBA</span><br>
-                Treasurer: <span class="muted">TBA</span><br>
-                Additional Member(s): <span class="muted">TBA</span><br><br>
-
-                <div class="strong">Programme</div>
-                • Spiritual guidance for the zone<br>
-                • Prayer & teaching leadership<br><br>
-
-                <a class="mini whats" id="waPastors" href="#" target="_blank" rel="noopener">🟢 More Info</a>
-              </td>
-
-              <!-- Mothers -->
-              <td style="padding:12px; border:1px solid #e2e8f0; vertical-align:top;">
-                <div class="strong">Leadership</div>
-                Chairperson: <span class="muted">TBA</span><br>
-                Vice Chairperson: <span class="muted">TBA</span><br>
-                Secretary: <span class="muted">TBA</span><br>
-                Vice Secretary: <span class="muted">TBA</span><br>
-                Treasurer: <span class="muted">TBA</span><br>
-                Additional Member(s): <span class="muted">TBA</span><br><br>
-
-                <div class="strong">Programme</div>
-                • Mothers conference planning<br>
-                • Welfare & hospitality<br><br>
-
-                <a class="mini whats" id="waMothers" href="#" target="_blank" rel="noopener">🟢 More Info</a>
-              </td>
-
-              <!-- Youth (FILLED) -->
-              <td style="padding:12px; border:1px solid #e2e8f0; vertical-align:top;">
-                <div class="strong">Leadership</div>
-                Chairperson: Mighty Mhlongo<br>
-                Vice Chairperson: Thato Manreng<br>
-                Secretary: Collen Mkansi<br>
-                Vice Secretary: Hlulani Ubisi<br>
-                Treasurer: Gusta Nxumalo<br>
-                Additional Member(s):<br>
-                • Glan Zitha<br>
-                • Precious Godi<br>
-                • Brighter Mafumo<br><br>
-
-                <div class="strong">Programme</div>
-                • Youth conferences coordination<br>
-                • Weekly youth programmes<br>
-                • Fundraising & sponsorship<br><br>
-
-                <a class="mini whats" id="waYouth" href="#" target="_blank" rel="noopener">🟢 More Info</a>
-              </td>
-
-              <!-- Children -->
-              <td style="padding:12px; border:1px solid #e2e8f0; vertical-align:top;">
-                <div class="strong">Leadership</div>
-                Chairperson: <span class="muted">TBA</span><br>
-                Vice Chairperson: <span class="muted">TBA</span><br>
-                Secretary: <span class="muted">TBA</span><br>
-                Vice Secretary: <span class="muted">TBA</span><br>
-                Treasurer: <span class="muted">TBA</span><br>
-                Additional Member(s): <span class="muted">TBA</span><br><br>
-
-                <div class="strong">Programme</div>
-                • Children’s conferences<br>
-                • Sunday school support<br>
-                • Outreach & mentorship<br><br>
-
-                <a class="mini whats" id="waChildren" href="#" target="_blank" rel="noopener">🟢 More Info</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p class="hint" style="margin-top:12px;">
-          ✏️ Replace <span class="strong">TBA</span> with official names anytime.
-        </p>
+            <p class="hint" style="margin-top:10px;">
+              You can edit committee names, positions, and members inside the script.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -464,7 +447,7 @@
         </div>
 
         <p class="hint" style="margin-top:12px;">
-          Number format example: <span class="strong">27731234567</span> (no +, no spaces). South Africa = 27.
+          Number format example: <span class="strong">27826944747</span> (no +, no spaces). South Africa = 27.
         </p>
       </div>
     </section>
@@ -479,7 +462,7 @@
      * EDIT THESE DETAILS  *
      ***********************/
     const CHAIRPERSON_NAME = "Chairperson";
-    const CHAIRPERSON_WHATSAPP = "27700000000"; // <-- CHANGE THIS (no +, no spaces)
+    const CHAIRPERSON_WHATSAPP = "27826944747"; // <-- CHANGE THIS (no +, no spaces)
     const DEFAULT_WHATSAPP_MESSAGE =
       "Good day Chairperson. I need more information about the Manyeleti Zone programme (2026). Please assist.";
 
@@ -498,8 +481,73 @@
       { order: 11, dateLabel: "03–06 December", dateSort: "2026-12-03", dateSpan: "03–06 December 2026", type: "Youth Conference",      location: "Welverdiend A" },
     ].sort((a,b) => a.dateSort.localeCompare(b.dateSort));
 
-    // Zone members (editable placeholders)
-    const members = [
+    // Committees (4 committees) — filter tabs will show one at a time
+    const committees = [
+      {
+        key: "youth",
+        name: "Youth Committee",
+        desc: "Youth leadership structure (Position + Full name)",
+        whatsappMessage: "Good day. Please assist with Youth Committee information (Manyeleti Zone 2026).",
+        members: [
+          { position: "Chairperson",       name: "Mighty Mhlongo" },
+          { position: "Vice Chairperson",  name: "Thato Monareng" },
+          { position: "Secretary",         name: "Collen Mkansi" },
+          { position: "Vice Secretary",    name: "Hlulani Ubisi" },
+          { position: "Treasurer",         name: "Gusta Nxumalo" },
+          { position: "Assist Treasure & Prayor Coordinator", name: "Glan Zitha" },
+          { position: "Organizer", name: "Precious Godi" },
+          { position: "Additional Member", name: "Brighter Mafumo" }
+          { position: "Additional Member", name: "Modekai Ndlovu" },
+          { position: "Additional Member", name: "Philadephia" },
+          { position: "Director", name: "Ps Simon P Siwele"
+        ]
+      },
+      {
+        key: "mothers",
+        name: "Mothers Committee",
+        desc: "Mothers leadership structure (edit names in the script)",
+        whatsappMessage: "Good day. Please assist with Mothers Committee information (Manyeleti Zone 2026).",
+        members: [
+          { position: "Chairperson",       name: "TBA" },
+          { position: "Vice Chairperson",  name: "TBA" },
+          { position: "Secretary",         name: "TBA" },
+          { position: "Vice Secretary",    name: "TBA" },
+          { position: "Treasurer",         name: "TBA" },
+          { position: "Additional Member", name: "TBA" },
+        ]
+      },
+      {
+        key: "children",
+        name: "Children’s Committee",
+        desc: "Children’s leadership structure",
+        whatsappMessage: "Good day. Please assist with Children’s Committee information (Manyeleti Zone 2026).",
+        members: [
+          { position: "Chairperson",       name: "Mrs Ndlovu " },
+          { position: "Vice Chairperson",  name: "TBA" },
+          { position: "Secretary",         name: "TBA" },
+          { position: "Vice Secretary",    name: "TBA" },
+          { position: "Treasurer",         name: "TBA" },
+          { position: "Additional Member", name: "TBA" },
+        ]
+      },
+      {
+        key: "executive",
+        name: "Zonal Executive",
+        desc: "Zone executive leadership structure (edit names in the script)",
+        whatsappMessage: "Good day. Please assist with Zonal Executive information (Manyeleti Zone 2026).",
+        members: [
+          { position: "Chairperson",       name: "Mrs Mkhomolo B" },
+          { position: "Vice Chairperson",  name: "Mrs Mhlongo " },
+          { position: "Secretary",         name: "TBA" },
+          { position: "Vice Secretary",    name: "TBA" },
+          { position: "Treasurer",         name: "TBA" },
+          { position: "Additional Member", name: "TBA" },
+        ]
+      }
+    ];
+
+    // Zone members cards 
+    const zoneMembers = [
       { name: "Name Surname", role: "Zone Chairperson", whatsapp: CHAIRPERSON_WHATSAPP },
       { name: "Name Surname", role: "Zone Secretary", whatsapp: CHAIRPERSON_WHATSAPP },
       { name: "Name Surname", role: "Zone Treasurer", whatsapp: CHAIRPERSON_WHATSAPP },
@@ -535,7 +583,7 @@
     }
 
     /***********************
-     * TABS
+     * MAIN TABS
      ***********************/
     function openTab(tabId){
       $$(".tab-btn").forEach(b => b.classList.toggle("active", b.dataset.tab === tabId));
@@ -545,7 +593,6 @@
       });
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-
     $$(".tab-btn").forEach(btn => btn.addEventListener("click", () => openTab(btn.dataset.tab)));
 
     /***********************
@@ -605,11 +652,52 @@
     }
 
     /***********************
-     * MEMBERS
+     * COMMITTEES (FILTER TABS)
      ***********************/
-    function renderMembers(){
+    let activeCommitteeKey = committees[0]?.key || "youth";
+
+    function renderCommitteeTabs(){
+      const root = $("#committeeTabs");
+      root.innerHTML = committees.map(c => `
+        <button class="subtab-btn ${c.key === activeCommitteeKey ? "active" : ""}" data-ckey="${c.key}">
+          ${c.name}
+        </button>
+      `).join("");
+
+      root.querySelectorAll(".subtab-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          activeCommitteeKey = btn.dataset.ckey;
+          root.querySelectorAll(".subtab-btn").forEach(b => b.classList.toggle("active", b.dataset.ckey === activeCommitteeKey));
+          renderCommitteeCard();
+        });
+      });
+
+      $("#committeeCountHint").textContent = `${committees.length} committees`;
+    }
+
+    function renderCommitteeCard(){
+      const committee = committees.find(c => c.key === activeCommitteeKey) || committees[0];
+
+      $("#committeeTitle").textContent = committee.name;
+      $("#committeeDesc").textContent = committee.desc;
+
+      const tbody = $("#committeeTableBody");
+      tbody.innerHTML = (committee.members || []).map(m => `
+        <tr>
+          <td>${m.position}</td>
+          <td>${m.name}</td>
+        </tr>
+      `).join("") || `<tr><td colspan="2" class="muted">No members yet.</td></tr>`;
+
+      $("#committeeWhats").href = waLink(CHAIRPERSON_WHATSAPP, committee.whatsappMessage);
+    }
+
+    /***********************
+     * ZONE MEMBERS
+     ***********************/
+    function renderZoneMembers(){
       const grid = $("#membersGrid");
-      grid.innerHTML = members.map(m => {
+      grid.innerHTML = zoneMembers.map(m => {
         const msg = `Good day. Please assist me with information for Manyeleti Zone (2026).`;
         return `
           <div class="person">
@@ -626,7 +714,7 @@
     }
 
     /***********************
-     * CONTACT + COMMITTEE LINKS
+     * CONTACT
      ***********************/
     function setupContact(){
       const mainLink = waLink(CHAIRPERSON_WHATSAPP, DEFAULT_WHATSAPP_MESSAGE);
@@ -645,13 +733,6 @@
       });
 
       $("#btnGoProgramme").addEventListener("click", () => openTab("tab-programme"));
-
-      // Committees table WhatsApp buttons
-      $("#waExec").href = waLink(CHAIRPERSON_WHATSAPP, "Good day. Please assist with information about the Executive Committee (Manyeleti Zone 2026).");
-      $("#waPastors").href = waLink(CHAIRPERSON_WHATSAPP, "Good day. Please assist with information about the Pastors Committee (Manyeleti Zone 2026).");
-      $("#waMothers").href = waLink(CHAIRPERSON_WHATSAPP, "Good day. Please assist with information about the Mothers Committee (Manyeleti Zone 2026).");
-      $("#waYouth").href = waLink(CHAIRPERSON_WHATSAPP, "Good day. Please assist with information about the Youth Committee (Manyeleti Zone 2026).");
-      $("#waChildren").href = waLink(CHAIRPERSON_WHATSAPP, "Good day. Please assist with information about the Children’s Committee (Manyeleti Zone 2026).");
     }
 
     /***********************
@@ -661,7 +742,11 @@
 
     populateFilters();
     renderEvents();
-    renderMembers();
+
+    renderCommitteeTabs();
+    renderCommitteeCard();
+
+    renderZoneMembers();
     setupContact();
 
     ["searchInput","typeFilter","locationFilter"].forEach(id => {
