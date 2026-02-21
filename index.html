@@ -1,1 +1,780 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nazarene Revival Church | Manyeleti Zone (2026 Programme)</title>
+  <meta name="description" content="Nazarene Revival Church - Manyeleti Zone. 2026 programme, committees, and contact details." />
 
+  <style>
+    :root{
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --brand: #2563eb;
+      --brand2: #0ea5e9;
+      --ok: #16a34a;
+      --shadow: 0 12px 30px rgba(2, 6, 23, .08);
+      --radius: 18px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background: radial-gradient(900px 500px at 15% 10%, rgba(37,99,235,.10), transparent 55%),
+                  radial-gradient(900px 500px at 85% 15%, rgba(14,165,233,.10), transparent 55%),
+                  var(--bg);
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .container{ max-width:1100px; margin:0 auto; padding:22px; }
+
+    /* Top bar */
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(246,248,251,.72);
+      border-bottom:1px solid rgba(226,232,240,.8);
+    }
+    .topbar-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px; min-width:240px;
+    }
+    .logo{
+      width:44px; height:44px; border-radius:14px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      display:grid; place-items:center;
+      color:#fff; font-weight:900;
+      box-shadow: 0 10px 22px rgba(37,99,235,.25);
+      flex:0 0 auto;
+    }
+    .brand h1{
+      font-size:14px; line-height:1.2; margin:0;
+      letter-spacing:.2px;
+    }
+    .brand p{
+      margin:2px 0 0;
+      font-size:12px; color:var(--muted);
+    }
+
+    /* Nav tabs */
+    .tabs{
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+    }
+    .tab-btn{
+      border:1px solid var(--border);
+      background:#fff;
+      padding:10px 12px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:13px;
+      color:#0b1220;
+      cursor:pointer;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .tab-btn:hover{ transform: translateY(-1px); box-shadow: 0 10px 20px rgba(2,6,23,.06); }
+    .tab-btn.active{
+      border-color: rgba(37,99,235,.35);
+      box-shadow: 0 12px 26px rgba(37,99,235,.15);
+      background: linear-gradient(135deg, rgba(37,99,235,.10), rgba(14,165,233,.10));
+    }
+
+    /* Hero */
+    .hero{
+      margin-top:18px;
+      border:1px solid var(--border);
+      background: linear-gradient(135deg, rgba(37,99,235,.10), rgba(14,165,233,.08)) , var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero-inner{
+      padding:22px;
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:16px;
+      align-items:center;
+    }
+    .hero h2{
+      margin:0 0 6px;
+      font-size:22px;
+      letter-spacing:.2px;
+    }
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.5;
+      font-size:14px;
+    }
+    .hero-badges{
+      display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(226,232,240,.9);
+      background: rgba(255,255,255,.75);
+      font-weight:700;
+      font-size:12px;
+      color:#0b1220;
+    }
+    .hero-card{
+      background: rgba(255,255,255,.75);
+      border:1px solid rgba(226,232,240,.9);
+      border-radius: 18px;
+      padding:14px;
+    }
+    .hero-card .small{ color:var(--muted); font-size:12px; margin:0 0 6px; }
+    .hero-card .big{ font-size:16px; font-weight:900; margin:0 0 10px; }
+    .btn-row{ display:flex; gap:10px; flex-wrap:wrap; }
+    .btn{
+      border:1px solid var(--border);
+      background:#fff;
+      padding:10px 12px;
+      border-radius: 12px;
+      font-weight:800;
+      cursor:pointer;
+      font-size:13px;
+      display:inline-flex; align-items:center; gap:10px;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); box-shadow: 0 12px 26px rgba(2,6,23,.08); }
+    .btn.primary{
+      border-color: rgba(37,99,235,.35);
+      background: linear-gradient(135deg, rgba(37,99,235,.14), rgba(14,165,233,.14));
+    }
+    .btn.whatsapp{
+      border-color: rgba(22,163,74,.35);
+      background: linear-gradient(135deg, rgba(22,163,74,.14), rgba(16,185,129,.12));
+    }
+
+    /* Sections */
+    .section{
+      margin-top:18px;
+      border:1px solid var(--border);
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .section-head{
+      padding:16px 18px;
+      border-bottom:1px solid var(--border);
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .section-head h3{ margin:0; font-size:16px; letter-spacing:.2px; }
+    .section-head p{ margin:0; color:var(--muted); font-size:12px; }
+
+    .section-body{ padding:16px 18px 18px; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+    }
+    .col-12{ grid-column: span 12; }
+    .col-8{ grid-column: span 8; }
+    .col-6{ grid-column: span 6; }
+    .col-4{ grid-column: span 4; }
+
+    @media (max-width: 920px){
+      .hero-inner{ grid-template-columns: 1fr; }
+      .col-8,.col-6,.col-4{ grid-column: span 12; }
+      .tabs{ justify-content:flex-start; }
+      .brand{ min-width:auto; }
+    }
+
+    /* Controls */
+    .controls{
+      display:flex; gap:10px; flex-wrap:wrap;
+      align-items:center; justify-content:space-between;
+      margin-bottom:12px;
+    }
+    .control-left{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .input, .select{
+      border:1px solid var(--border);
+      background:#fff;
+      border-radius: 12px;
+      padding:10px 12px;
+      font-weight:700;
+      font-size:13px;
+      color:#0b1220;
+      min-width: 220px;
+      outline:none;
+    }
+    .select{ min-width: 190px; cursor:pointer; }
+    .hint{ font-size:12px; color:var(--muted); }
+
+    /* Event cards */
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:12px;
+    }
+    .event{
+      grid-column: span 6;
+      border:1px solid var(--border);
+      border-radius: 16px;
+      padding:14px;
+      background: linear-gradient(135deg, rgba(2,6,23,.02), rgba(2,6,23,0)) , #fff;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .event:hover{ transform: translateY(-1px); box-shadow: 0 16px 30px rgba(2,6,23,.08); }
+    .event-top{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:10px;
+      margin-bottom:10px;
+    }
+    .event h4{ margin:0; font-size:14px; }
+    .event .meta{ margin:4px 0 0; color:var(--muted); font-size:12px; line-height:1.35; }
+    .pill{
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(226,232,240,.95);
+      background: rgba(37,99,235,.07);
+      font-weight:900;
+      font-size:12px;
+      white-space:nowrap;
+    }
+    .event-actions{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;
+    }
+    .mini{
+      padding:9px 10px;
+      border-radius: 12px;
+      font-weight:900;
+      font-size:12px;
+      border:1px solid var(--border);
+      background:#fff;
+      cursor:pointer;
+    }
+    .mini.whats{ border-color: rgba(22,163,74,.35); background: rgba(22,163,74,.08); }
+    .mini.info{ border-color: rgba(37,99,235,.35); background: rgba(37,99,235,.08); }
+
+    @media (max-width: 720px){
+      .event{ grid-column: span 12; }
+      .input{ min-width: 100%; }
+      .select{ min-width: 100%; }
+    }
+
+    /* Tables / lists */
+    .list{
+      border:1px solid var(--border);
+      border-radius: 16px;
+      overflow:hidden;
+    }
+    .list .row{
+      display:grid;
+      grid-template-columns: 1.1fr 1fr 1fr auto;
+      gap:10px;
+      padding:12px 12px;
+      border-top:1px solid var(--border);
+      align-items:center;
+      background:#fff;
+    }
+    .list .row:first-child{ border-top:none; }
+    .row .title{ font-weight:900; font-size:13px; }
+    .row .sub{ color:var(--muted); font-size:12px; }
+    .row .right{ display:flex; gap:10px; justify-content:flex-end; }
+    @media (max-width: 820px){
+      .list .row{
+        grid-template-columns: 1fr;
+      }
+      .row .right{ justify-content:flex-start; }
+    }
+
+    /* People cards */
+    .people{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:12px;
+    }
+    .person{
+      grid-column: span 4;
+      border:1px solid var(--border);
+      border-radius: 16px;
+      padding:14px;
+      background:#fff;
+    }
+    .person .avatar{
+      width:44px; height:44px;
+      border-radius: 14px;
+      display:grid; place-items:center;
+      font-weight:900;
+      color:#0b1220;
+      background: linear-gradient(135deg, rgba(37,99,235,.14), rgba(14,165,233,.12));
+      border:1px solid rgba(37,99,235,.20);
+      margin-bottom:10px;
+    }
+    .person h4{ margin:0 0 4px; font-size:14px; }
+    .person p{ margin:0; color:var(--muted); font-size:12px; line-height:1.45; }
+    .person .actions{ margin-top:10px; display:flex; gap:10px; flex-wrap:wrap; }
+    @media (max-width: 920px){ .person{ grid-column: span 6; } }
+    @media (max-width: 620px){ .person{ grid-column: span 12; } }
+
+    /* Footer */
+    footer{
+      padding:26px 0 40px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+    }
+
+    /* Utility */
+    .hide{ display:none !important; }
+    .muted{ color:var(--muted); }
+    .strong{ font-weight:900; }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">NRC</div>
+        <div>
+          <h1>Nazarene Revival Church • Manyeleti Zone</h1>
+          <p>2026 Year Programme • Conferences • Committees • Contacts</p>
+        </div>
+      </div>
+
+      <nav class="tabs" aria-label="Main navigation">
+        <button class="tab-btn active" data-tab="tab-programme">Programme</button>
+        <button class="tab-btn" data-tab="tab-committees">Committees</button>
+        <button class="tab-btn" data-tab="tab-members">Zone Members</button>
+        <button class="tab-btn" data-tab="tab-contact">Contact</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-inner">
+        <div>
+          <h2>Manyeleti Zone — 2026 Conferences & Programme</h2>
+          <p>
+            This page shows the official yearly programme (sorted by date), committees and their activities,
+            and quick WhatsApp buttons for more information.
+          </p>
+
+          <div class="hero-badges">
+            <span class="badge">📅 Updated Programme</span>
+            <span class="badge">🧑‍🤝‍🧑 Committees & Members</span>
+            <span class="badge">💬 WhatsApp Quick Contact</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <p class="small">Quick action</p>
+          <p class="big">Need more info?</p>
+          <div class="btn-row">
+            <button class="btn primary" id="btnGoProgramme">📌 View programme</button>
+            <button class="btn whatsapp" id="btnWhatsAppChair">🟢 WhatsApp Chairperson</button>
+          </div>
+          <p class="small" style="margin-top:10px;">
+            Tip: replace the chairperson number in the code to your correct WhatsApp number.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB: PROGRAMME -->
+    <section class="section" id="tab-programme">
+      <div class="section-head">
+        <div>
+          <h3>Year Programme (All Conferences)</h3>
+          <p>Search, filter, and tap “More Info” to WhatsApp</p>
+        </div>
+        <div class="hint"><span class="strong" id="countEvents">0</span> events</div>
+      </div>
+
+      <div class="section-body">
+        <div class="controls">
+          <div class="control-left">
+            <input class="input" id="searchInput" placeholder="Search: location, type, month..." />
+            <select class="select" id="typeFilter">
+              <option value="All">All types</option>
+            </select>
+            <select class="select" id="locationFilter">
+              <option value="All">All locations</option>
+            </select>
+          </div>
+          <div class="hint" id="filterHint">Showing all events</div>
+        </div>
+
+        <div class="cards" id="eventsGrid" aria-label="Programme cards"></div>
+      </div>
+    </section>
+
+    <!-- TAB: COMMITTEES -->
+    <section class="section hide" id="tab-committees">
+      <div class="section-head">
+        <div>
+          <h3>Committees & Their Programmes</h3>
+          <p>Each committee can have a programme list + WhatsApp contact</p>
+        </div>
+        <div class="hint">Edit committee names and programmes in the script</div>
+      </div>
+
+      <div class="section-body">
+        <div class="list" id="committeesList" aria-label="Committees list"></div>
+
+        <p class="hint" style="margin-top:12px;">
+          If you want, I can customize this section with your real committee names, chairpersons, and full activities.
+        </p>
+      </div>
+    </section>
+
+    <!-- TAB: MEMBERS -->
+    <section class="section hide" id="tab-members">
+      <div class="section-head">
+        <div>
+          <h3>Zone Committee Members</h3>
+          <p>Names and roles (editable)</p>
+        </div>
+        <div class="hint">Add photos later if you want</div>
+      </div>
+
+      <div class="section-body">
+        <div class="people" id="membersGrid" aria-label="Members"></div>
+      </div>
+    </section>
+
+    <!-- TAB: CONTACT -->
+    <section class="section hide" id="tab-contact">
+      <div class="section-head">
+        <div>
+          <h3>Contact & WhatsApp</h3>
+          <p>Tap to message the chairperson</p>
+        </div>
+        <div class="hint">Works on phone + WhatsApp Web on PC</div>
+      </div>
+
+      <div class="section-body">
+        <div class="grid">
+          <div class="col-12">
+            <div class="list">
+              <div class="row">
+                <div>
+                  <div class="title">Chairperson (Manyeleti Zone)</div>
+                  <div class="sub" id="chairNumberPreview">WhatsApp: (set your number in the code)</div>
+                </div>
+                <div>
+                  <div class="title">Help</div>
+                  <div class="sub">Programme, conferences, directions, transport, updates</div>
+                </div>
+                <div>
+                  <div class="title">Hours</div>
+                  <div class="sub">Anytime (reply when available)</div>
+                </div>
+                <div class="right">
+                  <button class="mini whats" id="btnWhatsAppChair2">🟢 WhatsApp</button>
+                  <button class="mini info" id="btnCopyLink">🔗 Copy WhatsApp Link</button>
+                </div>
+              </div>
+            </div>
+
+            <p class="hint" style="margin-top:12px;">
+              Number format example: <span class="strong">27731234567</span> (no +, no spaces). South Africa = 27.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="yearNow"></span> Nazarene Revival Church • Manyeleti Zone • Built for programme sharing
+    </footer>
+  </main>
+
+  <script>
+    /***********************
+     * EDIT THESE DETAILS  *
+     ***********************/
+    const CHAIRPERSON_NAME = "Chairperson";
+    const CHAIRPERSON_WHATSAPP = "27700000000"; // <-- CHANGE THIS to the real number (no +, no spaces)
+    const DEFAULT_WHATSAPP_MESSAGE =
+      "Good day Chairperson. I need more information about the Manyeleti Zone programme (2026). Please assist.";
+
+    // Your provided programme (sorted by date)
+    const events = [
+      { order: 1,  dateLabel: "21 March",      dateSort: "2026-03-21", dateSpan: "21 March 2026",   type: "Youth Conference",     location: "Share" },
+      { order: 2,  dateLabel: "18 April",      dateSort: "2026-04-18", dateSpan: "18 April 2026",   type: "Mother’s Conference",  location: "Hluvukani" },
+      { order: 3,  dateLabel: "23 May",        dateSort: "2026-05-23", dateSpan: "23 May 2026",     type: "Children’s Conference",location: "Ludlow" },
+      { order: 4,  dateLabel: "30 May",        dateSort: "2026-05-30", dateSpan: "30 May 2026",     type: "Zonal Conference",     location: "Ludlow" },
+      { order: 5,  dateLabel: "10–13 July",    dateSort: "2026-07-10", dateSpan: "10–13 July 2026", type: "Youth Conference",     location: "Delani" },
+      { order: 6,  dateLabel: "11 July",       dateSort: "2026-07-11", dateSpan: "11 July 2026",    type: "Mother’s Conference",  location: "Welverdiend A" },
+      { order: 7,  dateLabel: "05 September",  dateSort: "2026-09-05", dateSpan: "05 September 2026",type:"Zonal Conference",     location: "Tlhavekisa" },
+      { order: 8,  dateLabel: "24 September",  dateSort: "2026-09-24", dateSpan: "24 September 2026",type:"Youth Conference",     location: "Ludlow" },
+      { order: 9,  dateLabel: "24 October",    dateSort: "2026-10-24", dateSpan: "24 October 2026", type: "Children’s Conference",location: "Welverdiend A" },
+      { order: 10, dateLabel: "31 October",    dateSort: "2026-10-31", dateSpan: "31 October 2026", type: "Mother’s Conference",  location: "Edinburg" },
+      { order: 11, dateLabel: "03–06 December",dateSort: "2026-12-03", dateSpan: "03–06 December 2026", type:"Youth Conference",  location: "Welverdiend A" },
+    ].sort((a,b) => a.dateSort.localeCompare(b.dateSort));
+
+    // Committees (placeholders you can rename)
+    const committees = [
+      {
+        name: "Youth Committee",
+        chair: "Youth Chairperson",
+        whatsapp: CHAIRPERSON_WHATSAPP,
+        programme: [
+          "Coordinate youth conferences and travel arrangements",
+          "Weekly youth activities planning and communication",
+          "Fundraising / sponsorship coordination"
+        ]
+      },
+      {
+        name: "Mother’s Committee",
+        chair: "Mother’s Chairperson",
+        whatsapp: CHAIRPERSON_WHATSAPP,
+        programme: [
+          "Mother’s conference planning and hosting",
+          "Support local church activities and welfare",
+          "Coordinate refreshments and hospitality"
+        ]
+      },
+      {
+        name: "Children’s Committee",
+        chair: "Children’s Chairperson",
+        whatsapp: CHAIRPERSON_WHATSAPP,
+        programme: [
+          "Children’s conference planning",
+          "Sunday school support and resources",
+          "Kids outreach and mentorship"
+        ]
+      },
+      {
+        name: "Zonal Executive",
+        chair: "Zone Executive",
+        whatsapp: CHAIRPERSON_WHATSAPP,
+        programme: [
+          "Oversee zone programme calendar",
+          "Confirm venues, dates and announcements",
+          "Coordinate with all local churches"
+        ]
+      }
+    ];
+
+    // Zone committee members (placeholders)
+    const members = [
+      { name: "Name Surname", role: "Zone Chairperson", whatsapp: CHAIRPERSON_WHATSAPP },
+      { name: "Name Surname", role: "Zone Secretary", whatsapp: CHAIRPERSON_WHATSAPP },
+      { name: "Name Surname", role: "Zone Treasurer", whatsapp: CHAIRPERSON_WHATSAPP },
+      { name: "Name Surname", role: "Youth Representative", whatsapp: CHAIRPERSON_WHATSAPP },
+      { name: "Name Surname", role: "Mother’s Representative", whatsapp: CHAIRPERSON_WHATSAPP },
+      { name: "Name Surname", role: "Children’s Representative", whatsapp: CHAIRPERSON_WHATSAPP },
+    ];
+
+    /***********************
+     * HELPERS
+     ***********************/
+    const $ = (sel) => document.querySelector(sel);
+    const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+
+    function waLink(number, message){
+      const clean = String(number || "").replace(/[^\d]/g,"");
+      const text = encodeURIComponent(message || "");
+      return `https://wa.me/${clean}?text=${text}`;
+    }
+
+    function initials(name){
+      return (name || "")
+        .split(" ")
+        .filter(Boolean)
+        .slice(0,2)
+        .map(s => s[0].toUpperCase())
+        .join("");
+    }
+
+    function monthNameFromISO(iso){
+      const d = new Date(iso + "T00:00:00");
+      return d.toLocaleString(undefined, { month:"long" });
+    }
+
+    /***********************
+     * TAB SWITCHING
+     ***********************/
+    function openTab(tabId){
+      $$(".tab-btn").forEach(b => b.classList.toggle("active", b.dataset.tab === tabId));
+      ["tab-programme","tab-committees","tab-members","tab-contact"].forEach(id => {
+        const el = document.getElementById(id);
+        el.classList.toggle("hide", id !== tabId);
+      });
+      // scroll to top of content nicely
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    $$(".tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => openTab(btn.dataset.tab));
+    });
+
+    /***********************
+     * RENDER: PROGRAMME
+     ***********************/
+    function populateFilters(){
+      // Types
+      const types = ["All", ...Array.from(new Set(events.map(e => e.type)))];
+      const typeSel = $("#typeFilter");
+      typeSel.innerHTML = types.map(t => `<option value="${t}">${t}</option>`).join("");
+
+      // Locations
+      const locs = ["All", ...Array.from(new Set(events.map(e => e.location)))];
+      const locSel = $("#locationFilter");
+      locSel.innerHTML = locs.map(l => `<option value="${l}">${l}</option>`).join("");
+    }
+
+    function renderEvents(){
+      const q = ($("#searchInput").value || "").trim().toLowerCase();
+      const type = $("#typeFilter").value;
+      const loc = $("#locationFilter").value;
+
+      const filtered = events.filter(e => {
+        const month = monthNameFromISO(e.dateSort).toLowerCase();
+        const hay = `${e.type} ${e.location} ${e.dateLabel} ${e.dateSpan} ${month}`.toLowerCase();
+        const okQ = !q || hay.includes(q);
+        const okT = (type === "All") || (e.type === type);
+        const okL = (loc === "All") || (e.location === loc);
+        return okQ && okT && okL;
+      });
+
+      $("#countEvents").textContent = filtered.length;
+      $("#filterHint").textContent =
+        (q || type !== "All" || loc !== "All")
+          ? `Filtered results: ${filtered.length} event(s)`
+          : "Showing all events";
+
+      const grid = $("#eventsGrid");
+      grid.innerHTML = filtered.map(e => {
+        const month = monthNameFromISO(e.dateSort);
+        const msg = `Good day ${CHAIRPERSON_NAME}. Please share more information about: ${e.type} (${e.dateSpan}) at ${e.location}.`;
+        return `
+          <article class="event">
+            <div class="event-top">
+              <div>
+                <h4>${e.type}</h4>
+                <div class="meta">📍 ${e.location} • 🗓️ ${e.dateSpan} • ${month}</div>
+              </div>
+              <div class="pill">#${e.order}</div>
+            </div>
+
+            <div class="event-actions">
+              <button class="mini info" onclick="alert('Event: ${e.type}\\nDate: ${e.dateSpan}\\nLocation: ${e.location}')">
+                ℹ️ Details
+              </button>
+              <a class="mini whats" href="${waLink(CHAIRPERSON_WHATSAPP, msg)}" target="_blank" rel="noopener">
+                🟢 More Info (WhatsApp)
+              </a>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      if (!filtered.length){
+        grid.innerHTML = `
+          <div class="muted" style="padding:12px;">
+            No events found. Try another search or set filters back to “All”.
+          </div>
+        `;
+      }
+    }
+
+    /***********************
+     * RENDER: COMMITTEES
+     ***********************/
+    function renderCommittees(){
+      const root = $("#committeesList");
+      root.innerHTML = committees.map(c => {
+        const msg = `Good day ${c.chair}. Please share more information about the ${c.name} programme for Manyeleti Zone (2026).`;
+        const prog = (c.programme || []).map(item => `• ${item}`).join("<br/>");
+        return `
+          <div class="row">
+            <div>
+              <div class="title">${c.name}</div>
+              <div class="sub">Chair: ${c.chair}</div>
+            </div>
+            <div>
+              <div class="title">Programme</div>
+              <div class="sub">${prog || "—"}</div>
+            </div>
+            <div>
+              <div class="title">Contact</div>
+              <div class="sub">WhatsApp available</div>
+            </div>
+            <div class="right">
+              <a class="mini whats" href="${waLink(c.whatsapp, msg)}" target="_blank" rel="noopener">🟢 More Info</a>
+              <button class="mini info" onclick="alert('${c.name}\\n\\nProgramme:\\n${(c.programme||[]).join("\\n")}')">ℹ️ View</button>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    /***********************
+     * RENDER: MEMBERS
+     ***********************/
+    function renderMembers(){
+      const grid = $("#membersGrid");
+      grid.innerHTML = members.map(m => {
+        const msg = `Good day. Please assist me with information for Manyeleti Zone (2026).`;
+        return `
+          <div class="person">
+            <div class="avatar" aria-hidden="true">${initials(m.name)}</div>
+            <h4>${m.name}</h4>
+            <p>${m.role}</p>
+            <div class="actions">
+              <a class="mini whats" href="${waLink(m.whatsapp, msg)}" target="_blank" rel="noopener">🟢 WhatsApp</a>
+              <button class="mini info" onclick="alert('${m.name}\\n${m.role}')">ℹ️ Details</button>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    /***********************
+     * CONTACT BUTTONS
+     ***********************/
+    function setupContact(){
+      const link = waLink(CHAIRPERSON_WHATSAPP, DEFAULT_WHATSAPP_MESSAGE);
+      $("#chairNumberPreview").textContent = `WhatsApp: ${CHAIRPERSON_WHATSAPP} (tap WhatsApp)`;
+
+      $("#btnWhatsAppChair").addEventListener("click", () => window.open(link, "_blank", "noopener"));
+      $("#btnWhatsAppChair2").addEventListener("click", () => window.open(link, "_blank", "noopener"));
+
+      $("#btnCopyLink").addEventListener("click", async () => {
+        try{
+          await navigator.clipboard.writeText(link);
+          alert("WhatsApp link copied!");
+        }catch(e){
+          prompt("Copy this link:", link);
+        }
+      });
+
+      $("#btnGoProgramme").addEventListener("click", () => openTab("tab-programme"));
+    }
+
+    /***********************
+     * INIT
+     ***********************/
+    document.getElementById("yearNow").textContent = new Date().getFullYear();
+    populateFilters();
+    renderEvents();
+    renderCommittees();
+    renderMembers();
+    setupContact();
+
+    ["searchInput","typeFilter","locationFilter"].forEach(id => {
+      document.getElementById(id).addEventListener("input", renderEvents);
+      document.getElementById(id).addEventListener("change", renderEvents);
+    });
+  </script>
+</body>
+</html>
