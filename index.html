@@ -301,9 +301,7 @@
       <div class="hero-inner">
         <div>
           <h2>Manyeleti Zone — 2026 Conferences & Programme</h2>
-          <p>
-            View the yearly programme, filter committees, and contact the chairperson quickly on WhatsApp.
-          </p>
+          <p>View the yearly programme, filter committees, and contact the chairperson quickly on WhatsApp.</p>
           <div class="hero-badges">
             <span class="badge">📅 Year Programme</span>
             <span class="badge">🧑‍🤝‍🧑 Committees</span>
@@ -318,9 +316,7 @@
             <button class="btn primary" id="btnGoProgramme">📌 View programme</button>
             <button class="btn whatsapp" id="btnWhatsAppChair">🟢 WhatsApp Chairperson</button>
           </div>
-          <p class="small" style="margin-top:10px;">
-            Change the WhatsApp number in the script (CHAIRPERSON_WHATSAPP).
-          </p>
+          <p class="small" style="margin-top:10px;">Change the WhatsApp number in the script (CHAIRPERSON_WHATSAPP).</p>
         </div>
       </div>
     </section>
@@ -353,7 +349,7 @@
       </div>
     </section>
 
-    <!-- TAB: COMMITTEES (FILTER TABS + 2-COLUMN TABLE) -->
+    <!-- TAB: COMMITTEES -->
     <section class="section hide" id="tab-committees">
       <div class="section-head">
         <div>
@@ -462,7 +458,7 @@
      * EDIT THESE DETAILS  *
      ***********************/
     const CHAIRPERSON_NAME = "Chairperson";
-    const CHAIRPERSON_WHATSAPP = "27826944747"; // <-- CHANGE THIS (no +, no spaces)
+    const CHAIRPERSON_WHATSAPP = "27826944747"; // no +, no spaces
     const DEFAULT_WHATSAPP_MESSAGE =
       "Good day Chairperson. I need more information about the Manyeleti Zone programme (2026). Please assist.";
 
@@ -494,12 +490,12 @@
           { position: "Secretary",         name: "Collen Mkansi" },
           { position: "Vice Secretary",    name: "Hlulani Ubisi" },
           { position: "Treasurer",         name: "Gusta Nxumalo" },
-          { position: "Assist Treasure & Prayor Coordinator", name: "Glan Zitha" },
-          { position: "Organizer", name: "Precious Godi" },
-          { position: "Additional Member", name: "Brighter Mafumo" }
+          { position: "Assistant Treasurer & Prayer Coordinator", name: "Glan Zitha" },
+          { position: "Organizer",         name: "Precious Godi" },
+          { position: "Additional Member", name: "Brighter Mafumo" },
           { position: "Additional Member", name: "Modekai Ndlovu" },
-          { position: "Additional Member", name: "Philadephia" },
-          { position: "Director", name: "Ps Simon P Siwele"
+          { position: "Additional Member", name: "Philadelphia" },
+          { position: "Director",          name: "Ps Simon P Siwele" },
         ]
       },
       {
@@ -522,7 +518,7 @@
         desc: "Children’s leadership structure",
         whatsappMessage: "Good day. Please assist with Children’s Committee information (Manyeleti Zone 2026).",
         members: [
-          { position: "Chairperson",       name: "Mrs Ndlovu " },
+          { position: "Chairperson",       name: "Mrs Ndlovu" },
           { position: "Vice Chairperson",  name: "TBA" },
           { position: "Secretary",         name: "TBA" },
           { position: "Vice Secretary",    name: "TBA" },
@@ -537,7 +533,7 @@
         whatsappMessage: "Good day. Please assist with Zonal Executive information (Manyeleti Zone 2026).",
         members: [
           { position: "Chairperson",       name: "Mrs Mkhomolo B" },
-          { position: "Vice Chairperson",  name: "Mrs Mhlongo " },
+          { position: "Vice Chairperson",  name: "Mrs Mhlongo" },
           { position: "Secretary",         name: "TBA" },
           { position: "Vice Secretary",    name: "TBA" },
           { position: "Treasurer",         name: "TBA" },
@@ -546,14 +542,14 @@
       }
     ];
 
-    // Zone members cards 
+    // Zone members cards
     const zoneMembers = [
       { name: "Name Surname", role: "Zone Chairperson", whatsapp: CHAIRPERSON_WHATSAPP },
-      { name: "Name Surname", role: "Zone Secretary", whatsapp: CHAIRPERSON_WHATSAPP },
-      { name: "Name Surname", role: "Zone Treasurer", whatsapp: CHAIRPERSON_WHATSAPP },
-      { name: "Name Surname", role: "Youth Representative", whatsapp: CHAIRPERSON_WHATSAPP },
-      { name: "Name Surname", role: "Mother’s Representative", whatsapp: CHAIRPERSON_WHATSAPP },
-      { name: "Name Surname", role: "Children’s Representative", whatsapp: CHAIRPERSON_WHATSAPP },
+      { name: "Name Surname", role: "Zone Secretary",   whatsapp: CHAIRPERSON_WHATSAPP },
+      { name: "Name Surname", role: "Zone Treasurer",   whatsapp: CHAIRPERSON_WHATSAPP },
+      { name: "Name Surname", role: "Youth Rep",        whatsapp: CHAIRPERSON_WHATSAPP },
+      { name: "Name Surname", role: "Mothers Rep",      whatsapp: CHAIRPERSON_WHATSAPP },
+      { name: "Name Surname", role: "Children’s Rep",   whatsapp: CHAIRPERSON_WHATSAPP },
     ];
 
     /***********************
@@ -652,7 +648,7 @@
     }
 
     /***********************
-     * COMMITTEES (FILTER TABS)
+     * COMMITTEES
      ***********************/
     let activeCommitteeKey = committees[0]?.key || "youth";
 
